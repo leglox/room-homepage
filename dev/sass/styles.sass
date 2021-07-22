@@ -1,34 +1,98 @@
+$primary-color: #000
+$secondary-color: #454545
+
 body
+  background: #fff
+  font-family: 'Spartan', sans-serif
+  font-size: 12px
   margin: 0
 
   *
     box-sizing: border-box
 
+a
+  color: $primary-color
+  text-decoration: none
+
 .section-slider
-  height: 80vh
+  min-height: 80vh
 
   .slider
     display: flex
-    height: 100%
+    height: 80vh
 
     .slider-image
       position: relative
       width: 60%
       height: 100%
-      background: lightblue
 
       .slider-controls
+        display: flex
+        flex-direction: row
+        justify-content: space-between
         position: absolute
         width: 25%
         height: 80px
         bottom: 0
         right: -25%
-        background: #666
+        background: #000
+        z-index: 2
+
+        .control
+          width: 100%
+          height: 100%
+          background: #000
+          border: none
+          cursor: pointer
+          transition: background .2s ease-in-out
+
+          &:hover
+            background: #454545
     
     .slider-content
+      background: #fff
       width: 40%
       height: 100%
-      background: skyblue
+
+      .slide
+        padding: 90px 60px
+
+        .slide-title
+          font-size: 3em
+          margin: 0
+
+        .slide-desc
+          font-weight: 600
+          color: $secondary-color
+          line-height: 1.6em
+          margin: 30px 0
+
+        .slide-link
+          text-transform: uppercase
+          letter-spacing: .5em
+
+          &:hover
+            color: $secondary-color
+
+          .link-icon
+            margin-left: 1em
+
+    .slider-image, .slider-content
+      .slider-wrapper
+        width: 100%
+        height: 100%
+        overflow: hidden
+
+        .slider-track
+          display: flex
+          flex-direction: row
+          height: 100%
+          transition: transform .4s ease-in-out
+
+          .slide
+            min-width: 100%
+            height: 100%
+            object-fit: cover
 
 .section-about
   display: flex
