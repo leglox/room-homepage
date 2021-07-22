@@ -63,9 +63,9 @@ a
 
         .slide-desc
           font-weight: 600
-          color: $secondary-color
           line-height: 1.6em
           margin: 30px 0
+          color: $secondary-color
 
         .slide-link
           text-transform: uppercase
@@ -100,10 +100,26 @@ a
 
   .about-image
     width: 25%
-    background: pink
+    object-fit: cover
 
   .about-content
+    display: flex
+    flex-direction: column
+    justify-content: center
     width: 50%
-    background: salmon
+    padding: 90px 60px
+    background: #fff
+
+    .about-title
+      text-transform: uppercase
+      letter-spacing: .5em
+      margin: 0
+
+    .about-desc
+      font-weight: 600
+      line-height: 1.6em
+      margin-bottom: 0
+      color: $secondary-color
+
 
 @import responsive
