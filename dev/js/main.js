@@ -1,3 +1,16 @@
+// NAVBAR
+
+const navbar = document.querySelector('.navbar')
+const navbarToggler = document.querySelector('.navbar-toggler')
+const navbarNav = document.querySelector('.navbar-nav')
+const navbarLogo = document.querySelector('.navbar-logo')
+
+navbarToggler.addEventListener('click', () => {
+  navbar.classList.toggle('active')
+})
+
+// SLIDER
+
 const sliderTrack = document.querySelectorAll('.slider-track')
 const sliderControlPrev = document.querySelector('.slider-controls .control-prev')
 const sliderControlNext = document.querySelector('.slider-controls .control-next')
